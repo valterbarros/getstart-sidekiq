@@ -38,6 +38,10 @@ RSpec.configure do |config|
     Sidekiq::Worker.clear_all
   end
 
+  config.after(:each, :run_sidekiq_job) do
+    Sidekiq::Worker.drain_all
+  end
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

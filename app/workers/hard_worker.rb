@@ -2,8 +2,10 @@ class HardWorker
   include Sidekiq::Worker
 
   def perform
-    result = []
+    puts 'start running sidekiq job'
 
+    result = []
+    
     File.open("#{Rails.root}/data/plannings.txt") do |line|
       result << line
     end
