@@ -1,4 +1,5 @@
-# README
+# getstart-sidekiq
+A repository created for try and learning about sidekiq
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
